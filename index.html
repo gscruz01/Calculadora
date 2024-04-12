@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1 id="titulo">Calculadora</h1>
+        <input type="number" name="text1" id="text1">
+        <input type="number" name="text2" id="text2">
+        <input type="button" value="Somar" id="botao">
+        <div id="res">Calculando...</div>
+    </div>
+    <!--------------- JS ---------------->
+<script>var cor = document.getElementById('botao')
+    cor.addEventListener('click', soma)
+    cor.addEventListener('mouseenter', entrou)
+    cor.addEventListener('mouseout', saiu)
+    function entrou() {
+        cor.style.background = 'rgb(67, 221, 129)'
+    }
+    function saiu() {
+        cor.style.background = 'white'
+    }
+    function entrou() {
+        cor.style.background = 'rgb(67, 221, 129)'
+    }
+    function soma() {
+        var texto1 = document.getElementById('text1')
+        var texto2 = document.getElementById('text2')
+        var n1 = Number(texto1.value)
+        var n2 = Number(texto2.value)
+        var s = n1 + n2
+        res.innerText = `O valor de ${n1} mais ${n2} é ${s}`
+    }</script>
+</body>
+
+</html>
